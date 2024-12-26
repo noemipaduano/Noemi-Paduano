@@ -1,17 +1,11 @@
 @import 'config';
-@import 'home';
+@import 'homepage';
 
 body {
   background-color: $primary-color;
   height: 100vh;
   font-family: 'League Spartan', Roboto, sans-serif;
   line-height: 1;
-}
-
-// Non so ma intanto lo metto
-
-h1, h2, h3 {
-  font-weight: 400;
 }
 
 header {
