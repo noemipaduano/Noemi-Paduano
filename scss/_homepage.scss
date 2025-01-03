@@ -1,24 +1,28 @@
+@mixin text-style($font-size, $font-weight, $letter-spacing, $line-height: null) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  text-align: center;
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
 .homepage {
   height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
+  padding-top: 30vh;
+  overflow: auto;
   align-items: center;
   text-align: center;
 }
 
-h2 {
-  font-weight: 700;
-  font-size: 70px;
-  text-align: center;
-  letter-spacing: -2%;
+.name {
+  @include text-style(70px, 700, -2%);
 }
 
-h1 {
- font-weight: 600;
- font-size: 30px;
- text-align: center;
- letter-spacing: -4%;
- line-height: 35px;
+.home-description {
+  @include text-style(30px, 600, -4%, 35px);
 }
 
 br {
@@ -26,3 +30,52 @@ br {
   color: $secondary-color;
 }
 
+.general {
+  @include text-style(30px, 500, -4%, 35px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+$btn-background: #764a90;  
+$btn-text-color: #fff;     
+$btn-width: 500px;         
+$btn-height: 55px;         
+$btn-radius: 8px;         
+$transition-time: 0.3s; 
+
+
+.btn-cta {
+  width: $btn-width;
+  height: $btn-height;
+  background-color: $btn-background;
+  color: $btn-text-color;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  border-radius: $btn-radius;
+  cursor: pointer;
+  transition: background-color $transition-time ease, transform $transition-time ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: darken($btn-background, 10%);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+}

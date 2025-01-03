@@ -7,30 +7,73 @@
 
 .homepage {
   height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
+  padding-top: 30vh;
+  overflow: auto;
   align-items: center;
   text-align: center;
 }
 
-h2 {
-  font-weight: 700;
+.name {
   font-size: 70px;
-  text-align: center;
+  font-weight: 700;
   letter-spacing: -2%;
+  text-align: center;
 }
 
-h1 {
-  font-weight: 600;
+.home-description {
   font-size: 30px;
-  text-align: center;
+  font-weight: 600;
   letter-spacing: -4%;
+  text-align: center;
   line-height: 35px;
 }
 
 br {
   font-weight: 700;
   color: #764a90;
+}
+
+.general {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -4%;
+  text-align: center;
+  line-height: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btn-cta {
+  width: 500px;
+  height: 55px;
+  background-color: #764a90;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-cta:hover {
+  background-color: #5a396e;
+  transform: translateY(-3px);
+}
+.btn-cta:active {
+  transform: translateY(1px);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .navigation {
@@ -197,7 +240,7 @@ nav ul li a:not(:only-child):after {
 body {
   background-color: #ffffff;
   height: 100vh;
-  font-family: "League Spartan", Roboto, sans-serif;
+  font-family: "League Spartan", Roboto, sans-serif !important;
   line-height: 1;
 }
 
