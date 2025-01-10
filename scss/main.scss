@@ -1,6 +1,8 @@
 @import 'config';
 @import 'homepage';
 @import 'menu.scss';
+@import 'contattami.scss';
+
 
 body {
   background-color: $primary-color;
@@ -10,7 +12,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   z-index: 2;
   width: 100%;
   padding: 1rem;
@@ -37,12 +39,117 @@ main {
   }
 }
 
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
+.footer-separator {
+  border-top: 2px solid #A9CD9D; /* Colore della linea separatrice (grigio scuro) */
+  width: 90%; /* Larghezza della linea separatrice (50% della larghezza del contenitore) */
+  margin: 0 auto; /* Centra la linea orizzontalmente */
+  margin-top: 50px; /* Distanza dal contenuto principale */
+  margin-bottom: 5px; /* Distanza dal footer */
+}
+
+
+.footer {
+  background-color: #343a40; 
+  color: white;
+
+
+  a {
+    color: #f8f9fa; 
+    text-decoration: none;
+    &:hover {
+      color: #d3d3d3; 
+    }
+  }
+
+
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+
+  
+  p {
+    font-size: 0.875rem;
+  }
+
+  .text-footer {
+    font-family: 'Inter', sans-serif; 
+    font-size: 16px; 
+    text-align: left; 
+    margin-bottom: 5px; 
+  }
+
+  .progress {
+    height: 15px;
+    margin-top: 0.8rem; 
+  }
+
+  .progress-bar {
+    background-color: #AC7DC7; 
+  }
+  
+  .social-links {
+    display: flex;            
+    justify-content: flex-start;        
+    margin: 0;                   
+    padding: 0;   
+  }
+
+  .social-links {
+    a {
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.2);
+      }
+      margin: 0;                 
+      padding: 0;   
+    }
+    
+.facebook,
+.instagram {
+  color: #AC7DC7; 
+  opacity: 85%;
+}
+
+.linkedin {
+  color: #A9CD9D; 
+  opacity: 95%;
+}
+}
+
+
+  @media (max-width: 576px) {
+    .footer .social-links {
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .footer .social-links a {
+      margin-bottom: 12px; 
+    }
+
+    .progress {
+      width: 80%;  
+      margin: 1 rem auto; 
+    }
+  } 
+}
+
+/* Stile per il titolo della sezione */
+.contattami,
+.home {
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.contattami:hover,
+.home:hover {
+  color: #AC7DC7;             /* Cambia colore al passaggio del mouse */
+}
+
+.footer a {
+  font-size: 16px;
+}
+
+.footer p {
+  margin-bottom: 5px;  /* Riduci il margine inferiore tra i paragrafi */
 }
 

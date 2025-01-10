@@ -7,7 +7,7 @@
 
 .homepage {
   height: 100%;
-  padding-top: 30vh;
+  padding-top: 10vh;
   overflow: auto;
   align-items: center;
   text-align: center;
@@ -76,9 +76,40 @@ br {
   margin-right: 70px;
 }
 
+.carousel-inner img {
+  width: 287px;
+  height: 383px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.card-text-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding-top: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 8px;
+}
+
+.card-body {
+  text-align: center;
+}
+
 .navigation {
   height: 70px;
   background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3 ease;
 }
 
 .nav-container {
@@ -99,7 +130,7 @@ br {
 }
 .brand a,
 .brand a:visited {
-  color: #0c0c0c;
+  color: hwb(0 5% 95%);
   text-decoration: none;
 }
 
@@ -120,20 +151,26 @@ nav ul li a {
   padding: 10px 20px 0 20px;
   line-height: 50px;
   background: #fff;
-  color: #0c0c0c;
+  color: hwb(0 5% 95%);
   text-decoration: none;
+  position: relative;
+  /* Hover effetto: la larghezza aumenta al 70% */
+  /* Se il link ha un sottomenu, mostriamo un simbolo '▾' */
 }
 nav ul li a::before {
-  transition: 300ms;
-  height: 5px;
+  /* Nuova transizione fluida per l'animazione */
+  transition: width 0.4s ease-in-out; /* Transizione fluida sulla larghezza */
+  height: 2px;
   content: "";
   position: absolute;
-  background-color: #6cae75;
-  width: 0%;
+  background-color: #A9CD9D;
+  width: 0%; /* La larghezza inizialmente è 0% */
   bottom: 0px;
+  left: 50%; /* Posiziona la barra a metà del link */
+  transform: translateX(-50%); /* Centra la barra rispetto al link */
 }
 nav ul li a:hover::before {
-  width: 70%;
+  width: 70%; /* La barra si espande al 70% della larghezza del link */
 }
 nav ul li a:not(:only-child):after {
   padding-left: 4px;
@@ -168,7 +205,7 @@ nav ul li a:not(:only-child):after {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 999px) {
   .nav-mobile {
     display: block;
   }
@@ -207,7 +244,7 @@ nav ul li a:not(:only-child):after {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #6cae75;
+  background: #A9CD9D;
   position: absolute;
   display: block;
   content: "";
@@ -232,11 +269,70 @@ nav ul li a:not(:only-child):after {
   transform: rotate(-45deg);
 }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 999px) {
   .nav-list {
     display: block !important;
   }
 }
+#contact-form {
+  width: 50%; /* Occupa metà dello schermo */
+  margin: 0; /* Rimuove il centramento automatico */
+  margin-left: 20px; /* Aggiunge un margine a sinistra */
+  padding: 20px; /* Aggiunge un po' di spazio interno */
+  border: none; /* Rimuove il bordo */
+  border-radius: 0; /* Rimuove eventuali angoli arrotondati */
+  box-shadow: none; /* Rimuove l'ombra */
+  background-color: #fff; /* Sfondo bianco */
+}
+#contact-form label {
+  display: block; /* Allinea i label sopra gli input */
+  margin-bottom: 10px; /* Spazio tra il label e il campo di input */
+  color: #333; /* Colore del testo */
+  font-weight: 500;
+}
+#contact-form .form-control {
+  width: 100%; /* Gli input occupano tutta la larghezza del form */
+  height: 45px; /* Altezza degli input */
+  border: 1px solid #43844E; /* Bordo grigio chiaro */
+  border-radius: 8px; /* Angoli arrotondati */
+  padding-left: 15px; /* Spazio interno a sinistra */
+  font-size: 16px; /* Dimensione del testo */
+  outline: none; /* Rimuove il bordo blu predefinito */
+  transition: border-color 0.3s ease; /* Transizione per il bordo al focus */
+}
+#contact-form .form-control:focus {
+  border-color: #43844e; /* Cambia il colore del bordo quando il campo è in focus */
+}
+#contact-form #message {
+  height: 120px;
+}
+#contact-form textarea.form-control {
+  resize: none; /* Disabilita il ridimensionamento manuale */
+}
+#contact-form .btn {
+  width: 100%; /* Il pulsante occupa tutta la larghezza */
+  height: 50px; /* Altezza del pulsante */
+  background-color: #764A90; /* Colore di sfondo verde */
+  border: 1px solid #fff; /* Bordo grigio chiaro */
+  border-radius: 8px; /* Angoli arrotondati */
+  color: #fff; /* Testo bianco */
+  font-size: 20px; /* Dimensione del testo */
+  font-weight: 600;
+  cursor: pointer; /* Mostra il puntatore al passaggio del mouse */
+  transition: background-color 0.3s ease; /* Transizione per il colore di sfondo */
+  margin-bottom: 10px; /* Spaziatura inferiore tra i campi */
+}
+#contact-form .btn:hover {
+  background-color: #6cae75; /* Cambia il colore al passaggio del mouse */
+}
+@media (max-width: 768px) {
+  #contact-form {
+    width: 90%; /* Su schermi piccoli, il form occupa il 90% della larghezza */
+    margin-left: 10px; /* Riduce il margine a sinistra su schermi piccoli */
+    float: none; /* Su schermi piccoli, disabilita il float per rimetterlo in posizione naturale */
+  }
+}
+
 body {
   background-color: #ffffff;
   height: 100vh;
@@ -245,7 +341,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   z-index: 2;
   width: 100%;
   padding: 1rem;
@@ -267,11 +363,96 @@ main a:hover {
   color: #764a90;
 }
 
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
+.footer-separator {
+  border-top: 2px solid #A9CD9D; /* Colore della linea separatrice (grigio scuro) */
+  width: 90%; /* Larghezza della linea separatrice (50% della larghezza del contenitore) */
+  margin: 0 auto; /* Centra la linea orizzontalmente */
+  margin-top: 50px; /* Distanza dal contenuto principale */
+  margin-bottom: 5px; /* Distanza dal footer */
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.footer a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #d3d3d3;
+}
+.footer p {
+  font-size: 0.875rem;
+}
+.footer .text-footer {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.footer .progress {
+  height: 15px;
+  margin-top: 0.8rem;
+}
+.footer .progress-bar {
+  background-color: #AC7DC7;
+}
+.footer .social-links {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.footer .social-links a {
+  transition: transform 0.2s;
+  margin: 0;
+  padding: 0;
+}
+.footer .social-links a:hover {
+  transform: scale(1.2);
+}
+.footer .social-links .facebook,
+.footer .social-links .instagram {
+  color: #AC7DC7;
+  opacity: 85%;
+}
+.footer .social-links .linkedin {
+  color: #A9CD9D;
+  opacity: 95%;
+}
+@media (max-width: 576px) {
+  .footer .footer .social-links {
+    text-align: center;
+    font-size: 10px;
+  }
+  .footer .footer .social-links a {
+    margin-bottom: 12px;
+  }
+  .footer .progress {
+    width: 80%;
+    margin: 1 rem auto;
+  }
+}
+
+/* Stile per il titolo della sezione */
+.contattami,
+.home {
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.contattami:hover,
+.home:hover {
+  color: #AC7DC7; /* Cambia colore al passaggio del mouse */
+}
+
+.footer a {
+  font-size: 16px;
+}
+
+.footer p {
+  margin-bottom: 5px; /* Riduci il margine inferiore tra i paragrafi */
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,65 @@
+#contact-form {
+  width: 50%; /* Occupa metà dello schermo */
+  margin: 0; /* Rimuove il centramento automatico */
+  margin-left: 20px; /* Aggiunge un margine a sinistra */
+  padding: 20px; /* Aggiunge un po' di spazio interno */
+  border: none; /* Rimuove il bordo */
+  border-radius: 0; /* Rimuove eventuali angoli arrotondati */
+  box-shadow: none; /* Rimuove l'ombra */
+  background-color: #fff; /* Sfondo bianco */
+
+  label {
+    display: block; /* Allinea i label sopra gli input */
+    margin-bottom: 10px; /* Spazio tra il label e il campo di input */
+    color: #333; /* Colore del testo */
+    font-weight: 500;
+  }
+
+  .form-control {
+    width: 100%; /* Gli input occupano tutta la larghezza del form */
+    height: 45px; /* Altezza degli input */
+    border: 1px solid #43844E; /* Bordo grigio chiaro */
+    border-radius: 8px; /* Angoli arrotondati */
+    padding-left: 15px; /* Spazio interno a sinistra */
+    font-size: 16px; /* Dimensione del testo */
+    outline: none; /* Rimuove il bordo blu predefinito */
+    transition: border-color 0.3s ease; /* Transizione per il bordo al focus */
+    
+    &:focus {
+      border-color: #43844e; /* Cambia il colore del bordo quando il campo è in focus */
+    }
+  }
+
+  #message {
+    height: 120px; 
+  }
+
+  textarea.form-control {
+    resize: none; /* Disabilita il ridimensionamento manuale */
+  }
+
+  .btn {
+    width: 100%; /* Il pulsante occupa tutta la larghezza */
+    height: 50px; /* Altezza del pulsante */
+    background-color: #764A90; /* Colore di sfondo verde */
+    border: 1px solid #fff; /* Bordo grigio chiaro */
+    border-radius: 8px; /* Angoli arrotondati */
+    color: #fff; /* Testo bianco */
+    font-size: 20px; /* Dimensione del testo */
+    font-weight: 600;
+    cursor: pointer; /* Mostra il puntatore al passaggio del mouse */
+    transition: background-color 0.3s ease; /* Transizione per il colore di sfondo */
+    margin-bottom: 10px; /* Spaziatura inferiore tra i campi */
+
+    &:hover {
+      background-color: #6cae75; /* Cambia il colore al passaggio del mouse */
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%; /* Su schermi piccoli, il form occupa il 90% della larghezza */
+    margin-left: 10px; /* Riduce il margine a sinistra su schermi piccoli */
+    float: none; /* Su schermi piccoli, disabilita il float per rimetterlo in posizione naturale */
+  }
+}
+
