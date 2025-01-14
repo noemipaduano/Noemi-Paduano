@@ -2,7 +2,7 @@
 @import 'homepage';
 @import 'menu.scss';
 @import 'contattami.scss';
-
+@import 'cv';
 
 body {
   background-color: $primary-color;
@@ -49,9 +49,6 @@ main {
 
 
 .footer {
-  background-color: #343a40; 
-  color: white;
-
 
   a {
     color: #f8f9fa; 
@@ -128,7 +125,7 @@ main {
 
     .progress {
       width: 80%;  
-      margin: 1 rem auto; 
+      margin: 1rem auto; 
     }
   } 
 }
@@ -140,10 +137,6 @@ main {
   transition: color 0.3s ease;
 }
 
-.contattami:hover,
-.home:hover {
-  color: #AC7DC7;             /* Cambia colore al passaggio del mouse */
-}
 
 .footer a {
   font-size: 16px;

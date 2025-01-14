@@ -1,65 +1,162 @@
-#contact-form {
-  width: 50%; /* Occupa metà dello schermo */
-  margin: 0; /* Rimuove il centramento automatico */
-  margin-left: 20px; /* Aggiunge un margine a sinistra */
-  padding: 20px; /* Aggiunge un po' di spazio interno */
-  border: none; /* Rimuove il bordo */
-  border-radius: 0; /* Rimuove eventuali angoli arrotondati */
-  box-shadow: none; /* Rimuove l'ombra */
-  background-color: #fff; /* Sfondo bianco */
-
-  label {
-    display: block; /* Allinea i label sopra gli input */
-    margin-bottom: 10px; /* Spazio tra il label e il campo di input */
-    color: #333; /* Colore del testo */
-    font-weight: 500;
+.container {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
   }
 
-  .form-control {
-    width: 100%; /* Gli input occupano tutta la larghezza del form */
-    height: 45px; /* Altezza degli input */
-    border: 1px solid #43844E; /* Bordo grigio chiaro */
-    border-radius: 8px; /* Angoli arrotondati */
-    padding-left: 15px; /* Spazio interno a sinistra */
-    font-size: 16px; /* Dimensione del testo */
-    outline: none; /* Rimuove il bordo blu predefinito */
-    transition: border-color 0.3s ease; /* Transizione per il bordo al focus */
-    
-    &:focus {
-      border-color: #43844e; /* Cambia il colore del bordo quando il campo è in focus */
+  form {
+    .form-label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .form-control {
+      border: 1px solid #43844e;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 1rem;
+      &:focus {
+        border-color: #764a90;
+        box-shadow: none;
+      }
+    }
+
+    button {
+      background-color: #764a90;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #6a3f80;
+      }
     }
   }
 
-  #message {
-    height: 120px; 
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 48px;
   }
 
-  textarea.form-control {
-    resize: none; /* Disabilita il ridimensionamento manuale */
+  .mt-3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .mt-4 {
+    font-size: 20px;
   }
 
-  .btn {
-    width: 100%; /* Il pulsante occupa tutta la larghezza */
-    height: 50px; /* Altezza del pulsante */
-    background-color: #764A90; /* Colore di sfondo verde */
-    border: 1px solid #fff; /* Bordo grigio chiaro */
-    border-radius: 8px; /* Angoli arrotondati */
-    color: #fff; /* Testo bianco */
-    font-size: 20px; /* Dimensione del testo */
-    font-weight: 600;
-    cursor: pointer; /* Mostra il puntatore al passaggio del mouse */
-    transition: background-color 0.3s ease; /* Transizione per il colore di sfondo */
-    margin-bottom: 10px; /* Spaziatura inferiore tra i campi */
+  .btn-secondary {
+    background-color: #764a90;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #6a3f80;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+  }
+}
+
+.social-container {
+  margin-top: 40px;
+  text-align: center;
+
+  a {
+    align-items: center;
+    display: inline-flex;            
+    justify-content: center;                          
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 
     &:hover {
-      background-color: #6cae75; /* Cambia il colore al passaggio del mouse */
+      transform: scale(1.1);
+    }
+
+    i {
+      font-size: 2.5rem;
     }
   }
 
-  @media (max-width: 768px) {
-    width: 90%; /* Su schermi piccoli, il form occupa il 90% della larghezza */
-    margin-left: 10px; /* Riduce il margine a sinistra su schermi piccoli */
-    float: none; /* Su schermi piccoli, disabilita il float per rimetterlo in posizione naturale */
+  .facebook,
+  .instagram {
+    color: #AC7DC7; 
+
+    &:hover {
+      color: #324b84;
+    }
+  }
+
+  .linkedin {
+    color: #A9CD9D; 
+
+    &:hover {
+      color: #005d91;
+    }
+  }
+}
+
+
+@media (max-width: 991px) {
+  .container {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .form-control {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .mt-3 {
+      margin-bottom: 10px; /* Aggiunge spazio sotto .mt-3 negli schermi piccoli */
+    }
+
+    .mt-4 {
+      text-align: left; /* Allinea il contenuto di .mt-4 a sinistra */
+      margin-top: 5px; /* Aggiunge un piccolo margine sopra il testo */
+    }
+  }
+
+  .social-container {
+    a {
+      i {
+        font-size: 2rem; /* Riduce la dimensione delle icone sui dispositivi piccoli */
+      }
+    }
+  }
+
+  .col-lg-6.text-center img {
+    margin-bottom: 0; /* Rimuove il margin-bottom per l'immagine sugli schermi piccoli */
+    margin-top: 20px; /* Mantiene un piccolo margine sopra l'immagine */
   }
 }
 
