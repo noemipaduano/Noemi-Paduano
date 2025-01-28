@@ -1,115 +1,196 @@
+$primary-color: #6a329f;
+$secondary-color: #43844e;
+$tertiary-color: #A9CDAD;
+$bg-color: #f9f9f9;
+$light-bg-color: #f4f4f4;
+$dark-color: #333;
+$hover-color: #A9CDAD;
+$border-radius: 8px;
+$box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+$font-size-base: 14px;
+$font-size-lg: 20px;
+$font-size-xl: 28px;
+
+@mixin flex-container($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin responsive-max-width($breakpoint, $value) {
+  @media (min-width: $breakpoint) {
+    max-width: $value;
+  }
+}
+
+@mixin font-style($font-size, $font-weight: normal, $color: $dark-color, $line-height: null) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+@mixin hover-effect($scale, $color) {
+  transition: transform 0.3s ease, color 0.3s ease;
+  &:hover {
+    color: $color;
+    transform: scale($scale);
+  }
+}
+
+@mixin border-style($color, $radius, $style: solid, $width: 1px) {
+  border: $width $style $color;
+  border-radius: $radius;
+}
+
+@mixin section-title($font-size, $color, $margin-bottom: 10px) {
+  font-size: $font-size;
+  color: $color;
+  margin-bottom: $margin-bottom;
+}
+
+@mixin circle-progress($size, $color, $bg-color, $inner-size: 80%) {
+  position: relative;
+  width: $size;
+  height: $size;
+  margin: 0 auto;
+  background: conic-gradient($color calc(var(--percentage) * 1%), $bg-color calc(var(--percentage) * 1%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .circle-inner {
+    width: $inner-size;
+    height: $inner-size;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: $bg-color;
+  color: $dark-color;
 }
 
 .curriculum-container {
   max-width: 1000px;
   margin: 15px auto;
   background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  @include border-style(rgba(0, 0, 0, 0.1), $border-radius);
+  box-shadow: $box-shadow;
   overflow: hidden;
+
+  @include responsive-max-width(1024px, 1000px);
 }
 
 .header {
-  display: flex;
-  flex-wrap: wrap;
+  @include flex-container(row, flex-start, stretch, wrap);
   padding: 10px 0;
-  border-bottom: 2px solid #43844e;
+  border-bottom: 2px solid $secondary-color;
+
   .photo {
+    @include flex-container(center, center);
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-left: 10px;
+
     .profile-img {
       width: 280px;
       height: 300px;
       object-fit: cover;
-      border: 1px solid #43844e;
+      @include border-style($secondary-color, 0);
     }
   }
+
   .personal-info {
     flex: 2;
     padding-left: 20px;
+
     .name {
-      font-size: 28px;
-      font-weight: bold;
-      color: #6a329f;
+      @include font-style($font-size-xl, bold, $primary-color);
       text-align: left;
       padding-top: 10px;
     }
+
     .role {
-      font-size: 24px;
+      @include font-style($font-size-lg, normal, $dark-color);
       margin: 5px 0;
-      color: #333;
+
       span {
-        color: #6a329f;
+        color: $primary-color;
         font-style: italic;
       }
     }
+
     .info {
-      font-size: 14px;
+      @include font-style($font-size-base);
     }
+
     .social-links a {
-      font-size: 14px;
-      color: #6a329f;
-      margin-right: 1px;
-      transition: transform 0.3s ease, color 0.3s ease;
+      @include font-style($font-size-base, normal, $primary-color);
+      @include hover-effect(1.9, $tertiary-color);
       margin: 0;
       padding: 0;
-      
-      &:hover {
-        color: #A9CDAD;
-        transform: scale(1.9);
-      }
     }
   }
 }
 
-
 .content {
   padding: 20px;
+
   section {
     margin-bottom: 20px;
+
     h3 {
-      font-size: 20px;
-      color: #6a329f;
-      margin-bottom: 10px;
+      @include section-title($font-size-lg, $primary-color);
     }
+
     .intro-bio {
       line-height: 18px;
     }
+
     p, ul {
-      font-size: 14px;
-      line-height: 1.6;
+      @include font-style($font-size-base, normal, $dark-color, 1.6);
     }
+
     ul {
       list-style-type: none;
       padding: 0;
+
       li {
         margin-bottom: 5px;
       }
     }
   }
+
   .skills {
     .skill {
       margin-bottom: 10px;
+
       span {
+        @include font-style($font-size-base);
         display: block;
-        font-size: 14px;
         margin-bottom: 5px;
       }
+
       .progress-bar {
         background: #ddd;
         border-radius: 5px;
         overflow: hidden;
+
         .progress {
           height: 10px;
-          background: #6a329f;
+          background: $primary-color;
         }
       }
     }
@@ -120,59 +201,32 @@ body {
   margin-bottom: 20px;
 
   h3 {
-    font-size: 20px;
-    color: #6a329f;
-    margin-bottom: 20px;
+    @include section-title($font-size-lg, $primary-color, 20px);
   }
 
   .skills-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flex-container(row, space-between, stretch, wrap);
     gap: 20px;
 
     .circle-skill {
-      flex: 1 1 calc(33.333% - 20px); /* Tre cerchi per riga */
+      flex: 1 1 calc(33.333% - 20px);
       text-align: center;
 
       span {
-        display: block;
-        font-size: 14px;
-        color: #333;
+        @include font-style($font-size-base);
         margin-bottom: 10px;
       }
 
       .circle {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        background: conic-gradient(
-          #43844e calc(var(--percentage) * 1%),
-          #ddd calc(var(--percentage) * 1%)
-        );
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include circle-progress(100px, $secondary-color, #ddd);
 
         .circle-inner {
-          width: 80%;
-          height: 80%;
-          background: #fff;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
           .percentage {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 16px;
-            font-weight: bold;
-            color: #6a329f;
+            @include font-style(16px, bold, $primary-color);
           }
         }
       }
@@ -180,29 +234,23 @@ body {
   }
 }
 
-
 .interests {
   margin-bottom: 20px;
 
   h3 {
-    font-size: 20px;
-    color: #6a329f;
-    margin-bottom: 10px;
+    @include section-title($font-size-lg, $primary-color);
   }
 
   .interests-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-container(row, space-between, stretch, wrap);
     gap: 10px;
-    justify-content: space-between;
 
     .interest {
-      flex: 1 1 calc(33.333% - 10px); // Tre elementi per riga, con spazio tra di loro
+      flex: 1 1 calc(33.333% - 10px);
       text-align: center;
-      background: #f4f4f4;
-      border: 1px solid #ddd;
-      color: #43844e;
-      border-radius: 8px;
+      background: $light-bg-color;
+      @include border-style(#ddd, $border-radius);
+      color: $secondary-color;
       padding: 10px;
 
       img {
@@ -212,28 +260,16 @@ body {
       }
 
       span {
-        display: block;
-        font-size: 14px;
-        color: #333;
+        @include font-style($font-size-base, normal, $dark-color);
       }
     }
   }
 }
 
-
-
 @media (min-width: 768px) {
   .header {
-    flex-wrap: nowrap;
+    @include flex-container(row, flex-start, stretch, nowrap);
 
-    .photo {
-      flex: 1;
-    }
-
-    .personal-info {
-      flex: 2;
-      text-align: left;
-    }
     .name {
       text-align: center;
     }
@@ -248,14 +284,3 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  .curriculum-container {
-    max-width: 1000px;
-  }
-
-  .content section {
-    h3 {
-      font-size: 20px;
-    }
-  }
-}

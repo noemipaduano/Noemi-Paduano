@@ -56,36 +56,10 @@ nav {
         color: $nav-font-color;
         text-decoration: none;
         position: relative;
-        
-        &::before {
-          /* Nuova transizione fluida per l'animazione */
-          transition: width 0.4s ease-in-out; /* Transizione fluida sulla larghezza */
-          height: 2px;
-          content: "";
-          position: absolute;
-          background-color: $link-hover-color;
-          width: 0%;  /* La larghezza inizialmente è 0% */
-          bottom: 0px;
-          left: 50%;  /* Posiziona la barra a metà del link */
-          transform: translateX(-50%); /* Centra la barra rispetto al link */
-        }
-
-        /* Hover effetto: la larghezza aumenta al 70% */
-        &:hover::before {
-          width: 70%;  /* La barra si espande al 70% della larghezza del link */
-        }
-
-        /* Se il link ha un sottomenu, mostriamo un simbolo '▾' */
-        &:not(:only-child):after {
-          padding-left: 4px;
-          content: ' ▾';
-        }
       }
     }
   }
 }
-
-
 
 .button {
   background-color: $secondary-color;
@@ -150,6 +124,7 @@ nav {
   top: 22px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
+
   span,
   span:before,
   span:after {

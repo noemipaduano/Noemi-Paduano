@@ -31,15 +31,16 @@
 .container form button:hover {
   background-color: #6a3f80;
 }
-.container img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 48px;
-}
 .container .mt-3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #333;
   text-align: left;
   margin-bottom: 20px;
-  font-size: 20px;
+}
+.container .call-text {
+  padding-top: 60px;
+  margin-bottom: 20px;
 }
 .container .mt-4 {
   font-size: 20px;
@@ -47,11 +48,15 @@
 .container .btn-secondary {
   background-color: #764a90;
   border: none;
+  border-radius: 8px;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 20px;
   margin-left: auto;
   margin-right: auto;
+  position: fixed;
+  margin-top: 900px;
   transition: background-color 0.3s;
 }
 .container .btn-secondary:hover {
@@ -84,14 +89,14 @@
 }
 .social-container .facebook,
 .social-container .instagram {
-  color: #AC7DC7;
+  color: #ac7dc7;
 }
 .social-container .facebook:hover,
 .social-container .instagram:hover {
   color: #324b84;
 }
 .social-container .linkedin {
-  color: #A9CD9D;
+  color: #a9cd9d;
 }
 .social-container .linkedin:hover {
   color: #005d91;
@@ -100,6 +105,8 @@
 @media (max-width: 991px) {
   .container h2 {
     font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
   }
   .container .form-control {
     font-size: 0.9rem;
@@ -113,17 +120,13 @@
     font-size: 1rem;
   }
   .container .mt-3 {
-    margin-bottom: 10px; /* Aggiunge spazio sotto .mt-3 negli schermi piccoli */
+    margin-bottom: 10px;
   }
   .container .mt-4 {
-    text-align: left; /* Allinea il contenuto di .mt-4 a sinistra */
-    margin-top: 5px; /* Aggiunge un piccolo margine sopra il testo */
+    text-align: left;
+    margin-top: 5px;
   }
   .social-container a i {
-    font-size: 2rem; /* Riduce la dimensione delle icone sui dispositivi piccoli */
-  }
-  .col-lg-6.text-center img {
-    margin-bottom: 0; /* Rimuove il margin-bottom per l'immagine sugli schermi piccoli */
-    margin-top: 20px; /* Mantiene un piccolo margine sopra l'immagine */
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=contattami.css.map */
