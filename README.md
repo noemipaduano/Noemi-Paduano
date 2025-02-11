@@ -10,7 +10,8 @@ Il sito funge da **portfolio personale**, dove racconto chi sono, le mie compete
 
 ## 🛠️ Tecnologie utilizzate  
 - **HTML5** → Struttura della pagina  
-- **CSS3** → Stile e layout  
+- **CSS3 + SASS** → Stile e layout 
+- **JAVASCRIPT** → Funzionalità dinamiche (es. hamburger menu)
 - **Bootstrap 5** → Responsive design e componenti pre-stilizzati  
 - **GitHub Pages** → Deploy e hosting  
 
@@ -26,4 +27,4 @@ Se vuoi pubblicare un progetto simile, segui questi passaggi:
 4. GitHub genererà un link pubblico per il sito.  
 
 ## 📩 Contatti  
-Se vuoi darmi/ricevere consigli o collaborare, contattami su **[LinkedIn](https://www.linkedin.com/in/noemi-paduano-12a832300)**!  
+Se vuoi darmi/ricevere consigli o collaborare, contattami su **[Linkedin](https://www.linkedin.com/in/noemi-paduano-12a832300)**!  
