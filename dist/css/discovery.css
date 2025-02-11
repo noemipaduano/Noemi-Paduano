@@ -1,0 +1,219 @@
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  color: #764a90;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.back-button i {
+  margin-right: 8px;
+}
+
+.back-button:hover {
+  color: #AC7DC7;
+}
+
+.page-discovery .text-center h1 {
+  font-size: 24px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+.page-discovery .text-center h2 {
+  font-size: 60px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-discovery .text-center p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.page-discovery .row {
+  margin-top: 50px;
+}
+
+.page-discovery .row .col-md-6 img {
+  max-width: 100%;
+}
+
+.page-discovery .mt-5 p {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.page-discovery .mt-5 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.page-discovery .row.mt-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-discovery .row.mt-4 .col-md-6 {
+  padding-top: 30px;
+}
+
+.page-discovery .row.mt-4 .col-md-6 ul {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.page-discovery .row.mt-4 .col-md-6 ul li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.page-discovery .row.mt-4 .col-md-6 ul li small {
+  font-size: 16px;
+}
+
+.page-discovery .text-center a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #764a90;
+  border: 2px solid #764a90;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.page-discovery .text-center a:hover {
+  background-color: #764a90;
+  color: #fff;
+}
+
+.page-discovery .row .col-md-6 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.page-discovery .row.mt-4 .col-md-6 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .page-discovery section.mt-5 {
+    text-align: center;
+  }
+  .page-discovery section.mt-5 .row {
+    justify-content: center;
+    text-align: center;
+  }
+  .page-discovery section.mt-5 .row .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .page-discovery section.mt-5 h4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .page-discovery section.mt-5 ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .page-discovery section.mt-5 ul li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .page-discovery section.mt-5 ul li small {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .page-discovery section.mt-5 {
+    text-align: center;
+  }
+  .page-discovery section.mt-5 .row {
+    justify-content: center;
+    text-align: center;
+  }
+  .page-discovery section.mt-5 .row .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+  .page-discovery section.mt-5 h4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .page-discovery section.mt-5 ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .page-discovery section.mt-5 ul li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .page-discovery section.mt-5 ul li small {
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .page-discovery section.mt-5 {
+    text-align: center;
+  }
+  .page-discovery section.mt-5 .row {
+    justify-content: center;
+    text-align: center;
+  }
+  .page-discovery section.mt-5 .row .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  .page-discovery section.mt-5 h4 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .page-discovery section.mt-5 ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .page-discovery section.mt-5 ul li {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .page-discovery section.mt-5 ul li small {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .page-discovery .mt-5 h3 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=discovery.css.map */
