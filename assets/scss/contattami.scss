@@ -1,6 +1,8 @@
-$primary-color: #764a90;
-$primary-color-dark: #6a3f80;
-$secondary-color: #43844e;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiaty-color);
+$accent-color: var(--accent-color);
+$text-color: var(--text-color);
 $facebook-color: #ac7dc7;
 $instagram-color: #ac7dc7;
 $linkedin-color: #a9cd9d;
@@ -11,14 +13,14 @@ $hover-linkedin: #005d91;
   h2 {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: $text-color;
   }
 
   form {
     .form-label {
       font-size: 1rem;
       font-weight: 500;
-      color: #000;
+      color: $text-color;
     }
 
     .form-control {
@@ -36,13 +38,13 @@ $hover-linkedin: #005d91;
       background-color: $primary-color;
       border: none;
       border-radius: 8px;
-      color: #fff;
+      color: $primary-color;
       font-size: 1.2rem;
       font-weight: bold;
       padding: 10px 20px;
       transition: background-color 0.3s;
       &:hover {
-        background-color: $primary-color-dark;
+        background-color: $tertiary-color;
       }
     }
   }
@@ -50,7 +52,7 @@ $hover-linkedin: #005d91;
   .mt-3 {
     font-size: 20px;
     font-weight: normal;
-    color: #333;
+    color: $text-color;
     text-align: left;
     margin-bottom: 20px;
   }
@@ -68,7 +70,7 @@ $hover-linkedin: #005d91;
     background-color: $primary-color;
     border: none;
     border-radius: 8px;
-    color: #fff;
+    color: $primary-color;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -78,14 +80,14 @@ $hover-linkedin: #005d91;
     margin-top: 900px;
     transition: background-color 0.3s;
     &:hover {
-      background-color: $primary-color-dark;
+      background-color: $tertiary-color;
     }
   }
 
   p {
     font-size: 1.1rem;
     font-weight: 500;
-    color: #333;
+    color: $text-color;
   }
 }
 
@@ -132,7 +134,7 @@ $hover-linkedin: #005d91;
     h2 {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #333;
+      color: $text-color;
     }
 
     .form-control {

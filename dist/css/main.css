@@ -46,8 +46,8 @@ br {
 .btn-cta {
   width: 500px;
   height: 55px;
-  background-color: #764a90;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 24px;
   font-weight: 500;
   border: none;
@@ -90,7 +90,7 @@ br {
   bottom: 4px;
   right: 4px;
   background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: var(--primary-color);
   padding-top: 8px;
   padding-left: 6px;
   padding-right: 6px;
@@ -190,7 +190,7 @@ nav ul li a {
 }
 
 .button {
-  background-color: #764a90;
+  background-color: var(--secondary-color);
   color: #fff;
   height: 60px;
   width: 120px;
@@ -289,40 +289,40 @@ nav ul li a {
 .container h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 .container form .form-label {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
+  color: var(--text-color);
 }
 .container form .form-control {
-  border: 1px solid #43844e;
+  border: 1px solid var(--secondary-color);
   border-radius: 8px;
   padding: 10px;
   font-size: 1rem;
 }
 .container form .form-control:focus {
-  border-color: #764a90;
+  border-color: var(--primary-color);
   box-shadow: none;
 }
 .container form button {
-  background-color: #764a90;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 20px;
   transition: background-color 0.3s;
 }
 .container form button:hover {
-  background-color: #6a3f80;
+  background-color: var(--tertiaty-color);
 }
 .container .mt-3 {
   font-size: 20px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
   text-align: left;
   margin-bottom: 20px;
 }
@@ -334,10 +334,10 @@ nav ul li a {
   font-size: 20px;
 }
 .container .btn-secondary {
-  background-color: #764a90;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 20px;
@@ -348,12 +348,12 @@ nav ul li a {
   transition: background-color 0.3s;
 }
 .container .btn-secondary:hover {
-  background-color: #6a3f80;
+  background-color: var(--tertiaty-color);
 }
 .container p {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--text-color);
 }
 
 .social-container {
@@ -394,7 +394,7 @@ nav ul li a {
   .container h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--text-color);
   }
   .container .form-control {
     font-size: 0.9rem;
@@ -421,14 +421,14 @@ nav ul li a {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .curriculum-container {
   max-width: 1000px;
   margin: 15px auto;
-  background: #fff;
+  background: var(--primary-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -447,7 +447,7 @@ body {
   align-items: stretch;
   flex-wrap: wrap;
   padding: 10px 0;
-  border-bottom: 2px solid #43844e;
+  border-bottom: 2px solid var(--secondary-color);
 }
 .header .photo {
   display: flex;
@@ -463,7 +463,7 @@ body {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 1px solid #43844e;
+  border: 1px solid var(--secondary-color);
   border-radius: 0;
 }
 .header .personal-info {
@@ -473,29 +473,29 @@ body {
 .header .personal-info .name {
   font-size: 28px;
   font-weight: bold;
-  color: #6a329f;
+  color: var(--primary-color);
   text-align: left;
   padding-top: 10px;
 }
 .header .personal-info .role {
   font-size: 20px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
   margin: 5px 0;
 }
 .header .personal-info .role span {
-  color: #6a329f;
+  color: var(--primary-color);
   font-style: italic;
 }
 .header .personal-info .info {
   font-size: 14px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
 }
 .header .personal-info .social-links a {
   font-size: 14px;
   font-weight: normal;
-  color: #6a329f;
+  color: var(--primary-color);
   transition: transform 0.3s ease, color 0.3s ease;
   margin: 0;
   padding: 0;
@@ -513,7 +513,7 @@ body {
 }
 .content section h3 {
   font-size: 20px;
-  color: #6a329f;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 .content section .intro-bio {
@@ -522,7 +522,7 @@ body {
 .content section p, .content section ul {
   font-size: 14px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
   line-height: 1.6;
 }
 .content section ul {
@@ -538,7 +538,7 @@ body {
 .content .skills .skill span {
   font-size: 14px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
   display: block;
   margin-bottom: 5px;
 }
@@ -549,7 +549,7 @@ body {
 }
 .content .skills .skill .progress-bar .progress {
   height: 10px;
-  background: #6a329f;
+  background: var(--primary-color);
 }
 
 .additional-skills {
@@ -557,7 +557,7 @@ body {
 }
 .additional-skills h3 {
   font-size: 20px;
-  color: #6a329f;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 .additional-skills .skills-wrapper {
@@ -575,7 +575,7 @@ body {
 .additional-skills .skills-wrapper .circle-skill span {
   font-size: 14px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 .additional-skills .skills-wrapper .circle-skill .circle {
@@ -583,7 +583,7 @@ body {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background: conic-gradient(#43844e calc(var(--percentage) * 1%), #ddd calc(var(--percentage) * 1%));
+  background: conic-gradient(var(--secondary-color) calc(var(--percentage) * 1%), #ddd calc(var(--percentage) * 1%));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -592,7 +592,7 @@ body {
 .additional-skills .skills-wrapper .circle-skill .circle .circle-inner {
   width: 80%;
   height: 80%;
-  background: #fff;
+  background: #ddd;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -605,7 +605,7 @@ body {
   transform: translate(-50%, -50%);
   font-size: 16px;
   font-weight: bold;
-  color: #6a329f;
+  color: var(--primary-color);
 }
 
 .interests {
@@ -613,7 +613,7 @@ body {
 }
 .interests h3 {
   font-size: 20px;
-  color: #6a329f;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 .interests .interests-wrapper {
@@ -627,10 +627,10 @@ body {
 .interests .interests-wrapper .interest {
   flex: 1 1 calc(33.333% - 10px);
   text-align: center;
-  background: #f4f4f4;
+  background: var(--primary-color);
   border: 1px solid #ddd;
   border-radius: 8px;
-  color: #43844e;
+  color: var(--secondary-color);
   padding: 10px;
 }
 .interests .interests-wrapper .interest img {
@@ -641,7 +641,7 @@ body {
 .interests .interests-wrapper .interest span {
   font-size: 14px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
 }
 
 @media (min-width: 768px) {
@@ -824,7 +824,7 @@ body {
   display: inline-flex;
   align-items: center;
   font-size: 18px;
-  color: #764a90;
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 16px;
   margin-top: 20px;
@@ -916,14 +916,14 @@ body {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: #764a90;
-  border: 2px solid #764a90;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   padding: 10px 20px;
   border-radius: 5px;
 }
 
 .page-discovery .text-center a:hover {
-  background-color: #764a90;
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
@@ -1040,7 +1040,7 @@ body {
   }
 }
 body {
-  background-color: #764a90;
+  background-color: var(--primary-color);
   font-family: "League Spartan", "Montserrat", sans-serif !important;
   line-height: 1;
 }
@@ -1064,7 +1064,7 @@ main a {
   padding: 0.4rem;
 }
 main a:hover {
-  color: #6c757d;
+  color: var(--secondary-color);
 }
 
 .nav-list {
@@ -1078,7 +1078,7 @@ main a:hover {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: white;
+    background-color: var(--primary-color);
     width: 100%;
     padding: 10px 0;
     border-top: 1px solid #ccc;
@@ -1136,11 +1136,11 @@ main a:hover {
   padding-bottom: 2rem;
 }
 .footer a {
-  color: #f8f9fa;
+  color: var(--primary-color);
   text-decoration: none;
 }
 .footer a:hover {
-  color: #d3d3d3;
+  color: var(--primary-color);
 }
 .footer p {
   font-size: 0.875rem;

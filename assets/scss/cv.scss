@@ -1,9 +1,8 @@
-$primary-color: #6a329f;
-$secondary-color: #43844e;
-$tertiary-color: #A9CDAD;
-$bg-color: #f9f9f9;
-$light-bg-color: #f4f4f4;
-$dark-color: #333;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiaty-color);
+$accent-color: var(--accent-color);
+$text-color: var(--text-color);
 $hover-color: #A9CDAD;
 $border-radius: 8px;
 $box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -25,7 +24,7 @@ $font-size-xl: 28px;
   }
 }
 
-@mixin font-style($font-size, $font-weight: normal, $color: $dark-color, $line-height: null) {
+@mixin font-style($font-size, $font-weight: normal, $color: $text-color, $line-height: null) {
   font-size: $font-size;
   font-weight: $font-weight;
   color: $color;
@@ -53,12 +52,12 @@ $font-size-xl: 28px;
   margin-bottom: $margin-bottom;
 }
 
-@mixin circle-progress($size, $color, $bg-color, $inner-size: 80%) {
+@mixin circle-progress($size, $color, $primary-color, $inner-size: 80%) {
   position: relative;
   width: $size;
   height: $size;
   margin: 0 auto;
-  background: conic-gradient($color calc(var(--percentage) * 1%), $bg-color calc(var(--percentage) * 1%));
+  background: conic-gradient($color calc(var(--percentage) * 1%), $primary-color calc(var(--percentage) * 1%));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@ $font-size-xl: 28px;
   .circle-inner {
     width: $inner-size;
     height: $inner-size;
-    background: #fff;
+    background: $primary-color;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -79,14 +78,14 @@ $font-size-xl: 28px;
 body {
   margin: 0;
   padding: 0;
-  background-color: $bg-color;
-  color: $dark-color;
+  background-color: $primary-color;
+  color: $text-color;
 }
 
 .curriculum-container {
   max-width: 1000px;
   margin: 15px auto;
-  background: #fff;
+  background: $primary-color;
   @include border-style(rgba(0, 0, 0, 0.1), $border-radius);
   box-shadow: $box-shadow;
   overflow: hidden;
@@ -123,7 +122,7 @@ body {
     }
 
     .role {
-      @include font-style($font-size-lg, normal, $dark-color);
+      @include font-style($font-size-lg, normal, $text-color);
       margin: 5px 0;
 
       span {
@@ -138,7 +137,7 @@ body {
 
     .social-links a {
       @include font-style($font-size-base, normal, $primary-color);
-      @include hover-effect(1.9, $tertiary-color);
+      @include hover-effect(1.9, $hover-color);
       margin: 0;
       padding: 0;
     }
@@ -160,7 +159,7 @@ body {
     }
 
     p, ul {
-      @include font-style($font-size-base, normal, $dark-color, 1.6);
+      @include font-style($font-size-base, normal, $text-color, 1.6);
     }
 
     ul {
@@ -248,7 +247,7 @@ body {
     .interest {
       flex: 1 1 calc(33.333% - 10px);
       text-align: center;
-      background: $light-bg-color;
+      background: $primary-color;
       @include border-style(#ddd, $border-radius);
       color: $secondary-color;
       padding: 10px;
@@ -260,7 +259,7 @@ body {
       }
 
       span {
-        @include font-style($font-size-base, normal, $dark-color);
+        @include font-style($font-size-base, normal, $text-color);
       }
     }
   }

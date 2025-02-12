@@ -62,7 +62,7 @@ nav {
 }
 
 .button {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
   color:#fff;
   height: 60px;
   width: 120px;

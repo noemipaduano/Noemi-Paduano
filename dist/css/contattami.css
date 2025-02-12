@@ -1,40 +1,40 @@
 .container h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 .container form .form-label {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
+  color: var(--text-color);
 }
 .container form .form-control {
-  border: 1px solid #43844e;
+  border: 1px solid var(--secondary-color);
   border-radius: 8px;
   padding: 10px;
   font-size: 1rem;
 }
 .container form .form-control:focus {
-  border-color: #764a90;
+  border-color: var(--primary-color);
   box-shadow: none;
 }
 .container form button {
-  background-color: #764a90;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 20px;
   transition: background-color 0.3s;
 }
 .container form button:hover {
-  background-color: #6a3f80;
+  background-color: var(--tertiaty-color);
 }
 .container .mt-3 {
   font-size: 20px;
   font-weight: normal;
-  color: #333;
+  color: var(--text-color);
   text-align: left;
   margin-bottom: 20px;
 }
@@ -46,10 +46,10 @@
   font-size: 20px;
 }
 .container .btn-secondary {
-  background-color: #764a90;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 20px;
@@ -60,12 +60,12 @@
   transition: background-color 0.3s;
 }
 .container .btn-secondary:hover {
-  background-color: #6a3f80;
+  background-color: var(--tertiaty-color);
 }
 .container p {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--text-color);
 }
 
 .social-container {
@@ -106,7 +106,7 @@
   .container h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--text-color);
   }
   .container .form-control {
     font-size: 0.9rem;

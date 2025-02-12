@@ -1,3 +1,14 @@
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiaty-color);
+$accent-color: var(--accent-color);
+$text-color: var(--text-color);
+$btn-width: 500px;         
+$btn-height: 55px;         
+$btn-radius: 8px;         
+$transition-time: 0.3s; 
+
+
 @mixin text-style($font-size, $font-weight, $letter-spacing, $line-height: null) {
   font-size: $font-size;
   font-weight: $font-weight;
@@ -27,7 +38,7 @@
 
 br {
   font-weight: 700;
-  color: var(--secondary-color);
+  color: $secondary-color;
 }
 
 .general {
@@ -36,20 +47,11 @@ br {
   padding-bottom: 20px;
 }
 
-
-$btn-background: #764a90;  
-$btn-text-color: #fff;     
-$btn-width: 500px;         
-$btn-height: 55px;         
-$btn-radius: 8px;         
-$transition-time: 0.3s; 
-
-
 .btn-cta {
   width: $btn-width;
   height: $btn-height;
-  background-color: $btn-background;
-  color: $btn-text-color;
+  background-color: $secondary-color;
+  color: $primary-color;
   font-size: 24px;
   font-weight: 500;
   border: none;
@@ -61,7 +63,7 @@ $transition-time: 0.3s;
   align-items: center;
 
   &:hover {
-    background-color: darken($btn-background, 10%);
+    background-color: darken(#764a90, 10%);
     transform: translateY(-3px);
   }
 
@@ -95,7 +97,7 @@ $transition-time: 0.3s;
   bottom: 4px;
   right: 4px;
   background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: $primary-color;
   padding-top: 8px;
   padding-left: 6px;
   padding-right: 6px;

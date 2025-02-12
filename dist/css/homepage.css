@@ -39,8 +39,8 @@ br {
 .btn-cta {
   width: 500px;
   height: 55px;
-  background-color: #764a90;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 24px;
   font-weight: 500;
   border: none;
@@ -83,7 +83,7 @@ br {
   bottom: 4px;
   right: 4px;
   background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: var(--primary-color);
   padding-top: 8px;
   padding-left: 6px;
   padding-right: 6px;

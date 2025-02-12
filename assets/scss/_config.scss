@@ -1,7 +1,8 @@
-$primary-color: #ffffff;
-$secondary-color: #764a90;
-$tertiary-color: #43844e;
-$text-color: #000000;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiaty-color);
+$accent-color: var(--accent-color);
+$text-color: var(--text-color);
 
 * {
   box-sizing: border-box;
