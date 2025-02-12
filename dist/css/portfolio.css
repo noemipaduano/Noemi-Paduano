@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 .card-link:focus {
-  outline: 3px solid var(--secondary-color);
+  outline: 3px solid #764a90;
 }
 
 .container {
@@ -68,7 +68,8 @@
 .container .card-img-top {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 2px !important;
 }
 .container .card-title {
@@ -133,7 +134,7 @@
 }
 .container .card .card-body .d-flex .badge {
   background-color: #6c757d;
-  color: var(--text-color);
+  color: #000000;
   font-size: 0.8rem;
   margin-right: 0.5rem;
   font-weight: 400;
@@ -153,6 +154,4 @@
   opacity: 0.85;
   margin-left: 8px;
   margin-right: 15px;
-}
-
-/*# sourceMappingURL=portfolio.css.map */
+}/*# sourceMappingURL=portfolio.css.map */

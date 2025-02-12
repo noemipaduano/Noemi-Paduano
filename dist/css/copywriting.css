@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   font-size: 18px;
-  color: var(--secondary-color);
+  color: #764a90;
   text-decoration: none;
   font-size: 16px;
   margin-top: 20px;
@@ -20,6 +20,4 @@
 
 .back-button:hover {
   color: #AC7DC7;
-}
-
-/*# sourceMappingURL=copywriting.css.map */
+}/*# sourceMappingURL=copywriting.css.map */
