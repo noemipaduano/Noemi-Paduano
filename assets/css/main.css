@@ -634,7 +634,7 @@ body {
 .interests .interests-wrapper .interest {
   flex: 1 1 calc(33.333% - 10px);
   text-align: center;
-  background: var(--priamary-color);
+  background: #f4f4f4;
   border: 1px solid var(--primary-color);
   border-radius: 8px;
   color: var(--accent-color);
